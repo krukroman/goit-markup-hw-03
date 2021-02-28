@@ -9,9 +9,15 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 /* Шапка */
 .header {
   border-bottom: 1px solid #ececec;
+  margin: 0;
 }
 .logo {
   font-family: Raleway;
@@ -27,16 +33,25 @@ body {
 }
 /* 
   .navigation {
-}  
-*/
+
+}   */
+.container.header-container {
+  display: flex;
+  align-items: center;
+}
 .navigation-list {
   list-style: none;
+  display: flex;
+  margin: 0 0 0 93px;
+  padding: 0;
 }
-/* 
-.navigation-list-item {  
+.navigation-list-item + .navigation-list-item {
+  margin-left: 50px;
 }
-*/
+
 .navigation-list-link {
+  display: block;
+  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -55,12 +70,18 @@ body {
 }
 .header-contacts-list {
   list-style: none;
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
 }
-/*  
-  .header-contacts-list-item {    
+
+.header-contacts-list-item + .header-contacts-list-item {
+  margin-left: 50px;
 }
-*/
+
 .header-contacts-link {
+  display: block;
+  padding: 32px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -73,8 +94,11 @@ body {
 /* Секція-Герой */
 .section-hero {
   background-color: #2f303a;
+  margin: 0;
+  padding: 200px 0;
 }
 .section-hero-header {
+  margin: 0 0 30px 0;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -85,16 +109,18 @@ body {
 }
 .section-hero-button {
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 200px;
+  height: 50px;
   background: var(--accent-color);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-bg-color);
-  -webkit-text-stroke: 0.5px var(--main-text-color);
   border: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -104,8 +130,9 @@ body {
   background-color: #188ce8;
 }
 /* Секція-Переваги */
-/* .advantages {
-}*/
+.advantages {
+  padding: 94px 0;
+}
 .opacity-header {
   margin: 0;
   padding: 0;
@@ -115,23 +142,37 @@ body {
 }
 .advantages-list {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.advantages-list-item {
+  width: 270px;
+}
+.advantages-list-item + .advantages-list-item {
+  margin-left: 30px;
 }
 .advantages-list-item-header {
+  display: block;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
 }
 .advantages-list-item-text {
+  display: block;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin: 0;
 }
 /* Заголовки двох секцій "Що ми робимо" та "Наша команда" */
 .section-header {
+  margin: 0 0 50px 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.2;
@@ -139,26 +180,51 @@ body {
   letter-spacing: 0.03em;
 }
 /* Секція-Що ми робимо */
-/* .what-we-do {
- }
-  */
+.what-we-do {
+  padding-bottom: 94px;
+}
+
 .what-we-do-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.what-we-do-list-item + .what-we-do-list-item {
+  margin-left: 30px;
+}
+
+.what-we-do-img {
+  display: block;
 }
 /* Секція-Наша команда */
 .our-team {
   background: #f5f4fa;
+  margin: 0;
+  padding: 94px 0;
 }
 .our-team-cards-list {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 .our-team-card {
+  margin: 0;
   background: var(--main-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.our-team-card + .our-team-card {
+  margin-left: 30px;
+}
+.our-team-card-img {
+  display: block;
+  margin: 0 0 30px 0;
+}
 .our-team-card-name {
+  margin: 0 0 10px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -166,6 +232,7 @@ body {
   letter-spacing: 0.03em;
 }
 .our-team-card-job {
+  margin: 0 0 30px 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.2;
@@ -175,12 +242,22 @@ body {
 }
 /* Сторінка Портфоліо */
 /* Секція-Фільтри */
-/* .filter {
-} */
+.portfolio {
+  padding: 94px 0;
+}
 .filter-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
+  padding: 0;
   list-style: none;
 }
+.filter-list-item + .filter-list-item {
+  margin-left: 9px;
+}
 .filter-list-button {
+  display: block;
+  padding: 6px 22px;
   cursor: pointer;
   background: #f5f4fa;
   color: inherit;
@@ -200,19 +277,45 @@ body {
 
 /* Секція-Наші продукти */
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .products-list-item {
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   box-sizing: inherit;
 }
+.products-list-item:nth-child(3n + 1) {
+  margin: 0 0 30px 0;
+}
+.products-list-item:nth-child(3n + 2) {
+  margin: 0 0 30px 30px;
+}
+.products-list-item:nth-child(3n) {
+  margin: 0 0 30px 30px;
+}
+.products-list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+.products-list-img {
+  display: block;
+  margin: 0 0 20px 0;
+}
 .products-list-header {
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 0 24px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .products-list-text {
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0 24px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.9;
@@ -223,8 +326,11 @@ body {
 /* Підвал */
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 .footer-logo {
+  display: block;
+  margin: 0 0 20px 0;
   text-decoration: none;
   font-family: Raleway;
   font-style: normal;
@@ -236,6 +342,8 @@ body {
 }
 .footer-address-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .footer-address-list-item {
   color: var(--main-bg-color);
@@ -245,7 +353,15 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+.footer-address-list-item:not(.footer-address-list-item:last-child) {
+  margin: 0 0 9px 0;
+}
+.footer-address-list-text {
+  margin: 0;
+  display: block;
+}
 .footer-address-contacts-link {
+  display: block;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
