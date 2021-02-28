@@ -31,10 +31,10 @@ body {
 .logo-span {
   color: var(--accent-color);
 }
-/* 
-  .navigation {
 
-}   */
+.navigation {
+  margin: 0 0 0 93px;
+}
 .container.header-container {
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ body {
 .navigation-list {
   list-style: none;
   display: flex;
-  margin: 0 0 0 93px;
+  margin: 0;
   padding: 0;
 }
 .navigation-list-item + .navigation-list-item {
