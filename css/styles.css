@@ -18,6 +18,7 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
   margin: 0;
+  padding: 0;
 }
 .logo {
   font-family: Raleway;
@@ -131,6 +132,7 @@ body {
 }
 /* Секція-Переваги */
 .advantages {
+  margin: 0;
   padding: 94px 0;
 }
 .opacity-header {
@@ -181,6 +183,7 @@ body {
 }
 /* Секція-Що ми робимо */
 .what-we-do {
+  margin: 0;
   padding-bottom: 94px;
 }
 
@@ -243,6 +246,7 @@ body {
 /* Сторінка Портфоліо */
 /* Секція-Фільтри */
 .portfolio {
+  margin: 0;
   padding: 94px 0;
 }
 .filter-list {
@@ -326,6 +330,7 @@ body {
 /* Підвал */
 .footer {
   background-color: #2f303a;
+  margin: 0;
   padding: 60px 0;
 }
 .footer-logo {
