@@ -3,6 +3,7 @@
   --main-bg-color: #ffffff;
   --accent-color: #2196f3;
   --secondary-text-color: #757575;
+  --grid-list-item-margin: 15px;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -10,7 +11,7 @@ body {
   color: var(--main-text-color);
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -98,11 +99,18 @@ body {
   margin: 0;
   padding: 200px 0;
 }
-.section-hero-header {
+.container.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-hero-title {
+  display: block;
+  max-width: calc(100% / 1.72);
   margin: 0 0 30px 0;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.364;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -111,10 +119,7 @@ body {
 .section-hero-button {
   cursor: pointer;
   display: block;
-  margin: 0 auto;
-  padding: 10px 0;
-  width: 200px;
-  height: 50px;
+  padding: 10px 32px;
   background: var(--accent-color);
   font-weight: bold;
   font-size: 16px;
@@ -145,15 +150,14 @@ body {
 .advantages-list {
   list-style: none;
   display: flex;
-  margin: 0;
+  margin: calc(-1 * var(--grid-list-item-margin));
   padding: 0;
 }
 .advantages-list-item {
-  width: calc(100% / 3 - 90px);
+  margin: var(--grid-list-item-margin);
+  width: calc(100% / 3 - 2 * var(--grid-list-item-margin));
 }
-.advantages-list-item + .advantages-list-item {
-  margin-left: 30px;
-}
+
 .advantages-list-item-header {
   display: block;
   font-weight: bold;
@@ -173,7 +177,7 @@ body {
   margin: 0;
 }
 /* Заголовки двох секцій "Що ми робимо" та "Наша команда" */
-.section-header {
+.section-title {
   margin: 0 0 50px 0;
   font-weight: bold;
   font-size: 36px;
@@ -188,42 +192,42 @@ body {
 }
 
 .what-we-do-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  margin: calc(-1 * var(--grid-list-item-margin));
+  padding: 0;
+  list-style: none;
 }
-.what-we-do-list-item + .what-we-do-list-item {
-  margin-left: 30px;
+.what-we-do-list-item {
+  margin: var(--grid-list-item-margin);
+  width: calc(100% / 3 - 2 * var(--grid-list-item-margin));
 }
-
 .what-we-do-img {
   display: block;
+  max-width: 100%;
 }
 /* Секція-Наша команда */
 .our-team {
   background: #f5f4fa;
-  margin: 0;
+  margin: 0px;
   padding: 94px 0;
 }
 .our-team-cards-list {
   list-style: none;
   display: flex;
-  margin: 0;
+  margin: calc(-1 * var(--grid-list-item-margin));
   padding: 0;
 }
 .our-team-card {
-  margin: 0;
+  margin: var(--grid-list-item-margin);
+  width: calc(100% / 3 - 2 * var(--grid-list-item-margin));
   background: var(--main-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.our-team-card + .our-team-card {
-  margin-left: 30px;
-}
 .our-team-card-img {
   display: block;
+  max-width: 100%;
   margin: 0 0 30px 0;
 }
 .our-team-card-name {
@@ -283,28 +287,20 @@ body {
 .products-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: calc(-1 * var(--grid-list-item-margin));
   padding: 0;
   list-style: none;
 }
 .products-list-item {
-  border-bottom: 1px solid #eeeeee;
-  box-sizing: inherit;
+  margin: var(--grid-list-item-margin);
+  width: calc(100% / 3 - 2 * var(--grid-list-item-margin));
+  border: 1px solid #eeeeee;
 }
-.products-list-item:nth-child(3n + 1) {
-  margin: 0 0 30px 0;
-}
-.products-list-item:nth-child(3n + 2) {
-  margin: 0 0 30px 30px;
-}
-.products-list-item:nth-child(3n) {
-  margin: 0 0 30px 30px;
-}
-.products-list-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
+
 .products-list-img {
   display: block;
+  align-items: center;
+  max-width: 100%;
   margin: 0 0 20px 0;
 }
 .products-list-header {
